@@ -2,15 +2,14 @@
 
 import { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    chatkit: any;
+  }
+}
+
 export default function Home() {
   useEffect(() => {
-    // Declare the window type
-    declare global {
-      interface Window {
-        chatkit: any;
-      }
-    }
-
     // Load ChatKit script
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@openai/chatkit-js@latest/dist/index.js';
