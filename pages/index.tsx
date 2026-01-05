@@ -13,7 +13,7 @@ export default function Home() {
       if (window.OpenAI?.ChatKit) {
         window.OpenAI.ChatKit.init({
           api: {
-            async getClientSecret(existing) {
+            async getClientSecret(existing: string | null) {
               if (existing) {
                 return existing;
               }
