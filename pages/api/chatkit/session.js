@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.OPENAI_API_SECRET_KEY}`,
       },
       body: JSON.stringify({
-        workflow: { id: process.env.OPENAI_WORKFLOW_ID },
+        workflow: { id: 'wf_694eaa37cbd0819082a033c03a980cda05ca5c92ab37fcea' },
         user: 'user-' + Math.random().toString(36).substr(2, 9),
       }),
     });
