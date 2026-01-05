@@ -18,7 +18,7 @@ export default function Home() {
 
         // Load ChatKit script
         const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/@openai/chatkit-js@latest/dist/index.min.js';
+        script.src = 'https://cdn.jsdelivr.net/npm/@openai/chatkit-js@latest';
         script.async = true;
 
         script.onload = () => {
@@ -49,7 +49,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
       <h1>ChatKit Agent</h1>
       <div id="chatkit-root" style={{ height: '600px', width: '100%', border: '1px solid #ccc' }}></div>
     </div>
